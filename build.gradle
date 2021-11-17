@@ -2,8 +2,15 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+ext {
+    PUBLISH_GROUP_ID = 'com.jijiancode'
+    PUBLISH_ARTIFACT_ID = 'jjcode-sdk-server-java'
+    SDK_VERSION_NAME = "1.0.0"
+}
+
+group PUBLISH_GROUP_ID
+archivesBaseName = PUBLISH_ARTIFACT_ID
+version SDK_VERSION_NAME
 sourceCompatibility = '1.8'
 
 repositories {
@@ -19,3 +26,5 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+apply from: './publish.gradle'

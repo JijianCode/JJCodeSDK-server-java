@@ -7,15 +7,15 @@
 SDK 依赖 `org.json:json`, 如果使用 `maven` 可以添加依赖：
 ```xml
 <dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20190116</version>
+    <groupId>com.jijiancode</groupId>
+    <artifactId>jjcode-sdk-server-java</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
 如果使用的 gradle 可以添加依赖：
 ```gradle
-implementation 'org.json:json:20190116'
+implementation 'com.jijiancode:jjcode-sdk-server-java:1.0.0'
 ```
 
 // 导入包
@@ -25,7 +25,7 @@ implementation 'org.json:json:20190116'
 
 ```java
 VerifyState vs = JJCode.verify(appId, userSecret, mobile, requestToken);
-if(vs.getStatus() == 1) {
+if (vs.getStatus() == 1) {
     // 验证成功
 } else {
     // 验证失败
